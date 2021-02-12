@@ -1,6 +1,21 @@
-{
-  "name": "angular-open-street",
-  "version": "0.0.1",
+{"name": "angular-open-street",
+  "version": "1.0.0",
+  "description": "open street map angular helper",
+  "author": "Lahiru Mirihagoda",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lmadushan/angular-open-street.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lmadushan/angular-open-street/issues"
+  },
+  "homepage": "https://github.com/Lmadushan/angular-open-street",
+  "keywords": [
+    "angular",
+    "open",
+    "openstreet"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"

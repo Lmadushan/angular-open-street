@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularOpenStreetComponent } from '../../../angular-open-street/src/lib/angular-open-street.component';
+import { AngularOpenStreetComponent } from '../../../angular-open-street/src/lib/components/angular-open-street/angular-open-street.component';
 
 @NgModule({
   declarations: [

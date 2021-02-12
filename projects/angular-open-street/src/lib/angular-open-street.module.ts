@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { AngularOpenStreetComponent } from './angular-open-street.component';
+import { AngularOpenStreetComponent } from './components/angular-open-street/angular-open-street.component';
 
 
 
