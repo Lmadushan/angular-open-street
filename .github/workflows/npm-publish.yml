@@ -30,8 +30,6 @@ jobs:
         run: |
           npm i
           npm build --prod
-      - run: |
-          cd dist/angular-open-street
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -49,8 +47,6 @@ jobs:
         run: |
           npm i
           npm build --prod
-      - run: |
-          cd dist/angular-open-street
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
