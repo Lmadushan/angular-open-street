@@ -26,12 +26,15 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm i
-      - run: ng build angular-open-street  --prod
-      - run: cd dist/angular-open-street
-      - run: npm publish
+      - name: npm install and npm run build
+        run: |
+          npm i
+          npm build angular-open-street --prod
+      - run: |
+          cd dist/angular-open-street
+          npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   publish-gpr:
     needs: build
@@ -42,10 +45,12 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm i
-      - run: ng build angular-open-street  --prod
-      - run: cd dist/angular-open-street
-      - run: npm publish
+      - name: npm install and npm run build
+        run: |
+          npm i
+          npm build angular-open-street --prod
+      - run: |
+          cd dist/angular-open-street
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
