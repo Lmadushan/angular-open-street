@@ -40,18 +40,20 @@ export class AngularOpenStreetComponent implements OnInit {
         console.log('error');
       }
     );
-    this.map = new Map({
-      target: 'map',
-      layers: [
-        new TileLayer({
-          source: new OSM()
+    setTimeout(() => {
+      this.map = new Map({
+        target: 'map',
+        layers: [
+          new TileLayer({
+            source: new OSM()
+          })
+        ],
+        view: new View({
+          center: olProj.fromLonLat([this.defaultOptions.longitude, this.defaultOptions.latitude]),
+          zoom: this.defaultOptions.zoom
         })
-      ],
-      view: new View({
-        center: olProj.fromLonLat([this.defaultOptions.longitude, this.defaultOptions.latitude]),
-        zoom: this.defaultOptions.zoom
-      })
-    });
+      });
+    }, 100);
   }
 
 }
