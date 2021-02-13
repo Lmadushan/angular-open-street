@@ -28,6 +28,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: npm install and npm run build
         run: |
+          npm login
+            username: lahiru_mirihagoda
+            password: 961411840_Vv
+          npm whoami
           npm i
           npm build --prod
           npm publish
@@ -45,6 +49,10 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: npm install and npm run build
         run: |
+          npm login
+            username: lahiru_mirihagoda
+            password: 961411840_Vv
+          npm whoami
           npm i
           npm build --prod
           npm publish
